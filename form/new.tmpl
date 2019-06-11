@@ -1,0 +1,16 @@
+{{ define "New" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>Give us your contrubution</h2>  
+
+    <form method="POST" action="insert">
+            <div class="form-group">
+              <label> Name </label><input type="text" name="name" class="form-control">
+              <label> Suggest </label><input type="text" name="suggest" class="form-control" /><br />
+            </div>
+
+            <button type="submit"  class="btn btn-warning">Send suggest</button>
+          </form>
+
+  {{ template "Footer" }}
+{{ end }}

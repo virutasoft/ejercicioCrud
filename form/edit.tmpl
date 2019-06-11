@@ -1,0 +1,12 @@
+{{ define "Edit" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>Edit Name and Suggest</h2>  
+    <form method="POST" action="update">
+      <input type="hidden" name="uid" value="{{ .Id }}" />
+      <label> Name </label><input type="text" name="name" value="{{ .Name }}"  /><br />
+      <label> Suggest </label><input type="text" name="suggest" value="{{ .Suggest }}"  /><br />
+      <input type="submit" value="Send suggest" />
+    </form><br />    
+  {{ template "Footer" }}
+{{ end }}
